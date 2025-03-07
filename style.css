@@ -1,0 +1,306 @@
+/* Base Styles */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+body {
+  background-image: url(../assets/main_background.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/*custom elements*/
+page-title, titles {
+  display: block;
+  align-items: center; /* Center content horizontally */
+}
+
+/*h1*/
+page-title {
+  color: white;
+  text-align: center;
+  font-family: "Impact", sans-serif;
+  font-size: 64px;
+}
+
+/*h3*/
+titles {
+  color: white;
+  text-align: center;
+  font-family: "Arial Black", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: white;
+  text-align: center;
+  font-family: "Arial Black", sans-serif;
+  font-size: 12px;
+}
+
+tandc-text {
+  color: white;
+  text-align: center;
+  font-family: "Arial Black", sans-serif;
+  font-size: 12px;
+  padding: 15px;
+  max-width: 90%; /* Ensures the text doesn't span the entire width */
+  margin: 0 auto; /* Centers the text block within the container */
+}
+
+.tandc-text-bold {
+  color: white;
+  text-align: center;
+  font-family: "Arial Black", sans-serif;
+  font-size: 12px;
+  padding: 15px;
+  max-width: 90%; /* Ensures the text doesn't span the entire width */
+  margin: 0 auto; /* Centers the text block within the container */
+  font-weight: bold; /* Ensures the text is bold */
+}
+
+/* Adjust padding for mobile screens */
+@media (max-width: 600px) {
+  tandc-text, tandc-text-bold {
+    padding: 10px;  /* Smaller padding for phone screens */
+  }
+}
+
+/*h6*/
+tandcfooter {
+  color: white;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333333; /* Background color */
+  border-radius: 20px; /* Rounded corners for an oval effect */
+  padding: 5px 20px; /* Adds padding around the text */
+  display: inline-block; /* Ensure the background wraps only around the text */
+  white-space: nowrap; /* Prevent wrapping inside the footer */
+  max-width: 90%; /* Prevent the footer from stretching too wide */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Text and link styles for T&C and designer name */
+.footer-tc-text, .designer {
+  color: red; /* Text color for both */
+  padding: 0; /* Remove padding */
+  display: inline; /* Display text inline to remove extra space */
+  text-align: center; /* Center the text inside the inline-block */
+  margin: 0; /* Ensure no margin between elements */
+  background-color: transparent; /* Remove the background color */
+}
+
+.designer {
+  text-decoration: none;
+}
+
+/* Ensure no extra space between inline-block elements */
+footer {
+  font-size: 0; /* Eliminate gaps between inline-block elements */
+}
+
+footer .footer-text, footer .footer-tc-text, footer .designer {
+  font-size: 10px; /* Reset font size for elements to desired size */
+}
+
+/* Style the T&C link */
+footer a.footer-tc-text {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Ensure the link color is inherited */
+}
+
+/* Hover effect on T&C text */
+.footer-tc-text:hover {
+  color: #24252b; /* Color change on hover */
+}
+
+/* Links style */
+.t7c-links {
+  color: red; /* Set the link text color to red */
+  text-decoration: none; /* Remove underline */
+}
+
+.t7c-links:visited {
+  color: red; /* Set visited links to red as well */
+}
+
+.t7c-links:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+apaypal-form {
+  text-align: center;
+  align-items: center;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 500px) {
+  page-title {
+    font-size: 48px;
+  }
+  
+  titles {
+    font-size: 16px;
+  }
+  
+  tandcfooter {
+    font-size: 10px;
+  }
+}
+
+/* Clearfix */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  text-align: right;
+}
+
+.nav-list li {
+  display: inline-block;
+}
+
+.nav-link, .page-button {
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 0.625rem 1.25rem; /* Proportional padding */
+  text-decoration: none;
+  border-radius: 0.3125rem; /* Rounded corners */
+  box-shadow: 0.3125rem 0.3125rem 0.625rem red; /* Responsive shadow */
+  background-color: white;
+  font-weight: bold;
+  margin: 0.3125rem; /* Responsive margin */
+}
+
+.page-button {
+  background-color: #C0C0C0;
+}
+
+.nav-link:hover {
+  background-color: red;
+  color: white;
+  box-shadow: 0.3125rem 0.3125rem 0.9375rem white; /* Adjusted shadow for hover */
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-link, .page-button {
+    font-size: 0.875rem; /* Slightly smaller for tablets */
+    padding: 0.5rem 1rem; 
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-link, .page-button {
+    font-size: 0.75rem; /* Smaller for phones */
+    padding: 0.375rem 0.75rem; 
+  }
+}
+
+.link-container {
+  display: inline-block; /* Allow the link and cost to be inline */
+  text-align: left; /* Align text to the left within the container */
+  width: 300px; /* Set a fixed width for alignment */
+  margin: 0 auto; /* Center the container */
+  text-align: center;
+}
+
+/* Bio Page Stuff */
+.bio-card {
+    width: 400px; /* Fixed width */
+    height: 120px; /* Fixed height for the card */
+    background-color: #ffffff; /* White background */
+    border-radius: 50px; /* Fully rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    margin: 0 auto; /* Center the card horizontally */
+    position: relative;
+    align-items: center; /* Vertically center the content */
+    padding: 10px; /* Padding inside the card */
+    gap: 10px; /* Space between the image and content */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+}
+
+.bio-card-image {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 100px; /* Fixed width for the image */
+    height: 100px; /* Fixed height for the image */
+    border-radius: 50%; /* Make the image fully rounded */
+    object-fit: cover; /* Ensure proper scaling */
+    padding: 5px; /* Padding around the image */
+    background-color: #f0f0f0; /* Optional: Background around the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+}
+
+.bio-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align text to the left */
+    padding: 10px; /* Inner padding for the content */
+    flex: 1; /* Let the content take the remaining space */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.bio-card-title {
+    font-size: 20px; /* Text size */
+    font-weight: bold; /* Bold text */
+    color: #6e6d68; /* Text color */
+    -webkit-text-stroke: 1px #24252b; /* Outline effect */
+    text-align: left; /* Align text to the left */
+    margin: 0; /* No margin to align with description */
+    text-decoration: none;
+}
+
+.bio-card-description {
+    font-size: 14px; /* Text size */
+    color: red;
+    text-align: left; /* Align text to the left */
+    margin: 0; /* No margin for better alignment */
+    margin-top: 5px; /* Add slight space below the title */
+    text-decoration: none;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 600px) {
+    .bio-card {
+        width: 90%; /* Take up 90% width on mobile screens */
+        height: auto; /* Let height adjust naturally */
+        flex-direction: row; /* Keep image and text side by side */
+        align-items: center; /* Center items vertically */
+        padding: 15px;
+    }
+
+    .bio-card-image {
+        width: 80px; /* Smaller image on mobile */
+        height: 80px;
+        margin-bottom: 0; /* No extra space below the image */
+    }
+
+    .bio-card-content {
+        align-items: flex-start; /* Align text to the left on mobile */
+        text-align: left; /* Ensure left-aligned text */
+    }
+}
